@@ -1,0 +1,25 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('../img/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Para TODOS los botones con clase .btn.btn-secondary */
+.btn.btn-secondary {
+   text-decoration: none;
+   background: #6c757d;
+   color: white;
+   padding: 10px 15px;
+   border-radius: 5px;
+   margin-top: 2rem; /* Igual al ejemplo del <div> */
+}
+
+/* Estilo al pasar el mouse */
+.btn.btn-secondary:hover {
+   opacity: 0.9;
+}

@@ -1,0 +1,99 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('../img/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.certificates-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.certificates-list th, 
+.certificates-list td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.certificates-list th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.badge.approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.btn-view, 
+.btn-approve {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.btn-view {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.btn-view:hover {
+    background-color: #d6d8db;
+}
+
+.btn-approve {
+    background-color: #c3e6cb;
+    color: #155724;
+}
+
+.btn-approve:hover {
+    background-color: #b1dfbb;
+}
+
+.admin-actions {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn-back {
+    padding: 0.6rem 1.2rem;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+}

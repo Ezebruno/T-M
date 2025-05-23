@@ -1,0 +1,308 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../img/fondo.png') no-repeat center center fixed;
+    background-size: cover; /* <-- Esta línea soluciona el problema */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+.solicitudes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+    
+.solicitudes-table th,
+.solicitudes-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.solicitudes-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.solicitudes-table tr {
+    margin-bottom: 15px;
+}
+    
+.solicitudes-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.dashboard-header {
+    background-color: #c84132;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.user-role {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.dashboard-nav {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.dashboard-nav h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.dashboard-nav li {
+    margin: 0.5rem 0;
+}
+
+.dashboard-nav a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #34495e;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-nav a:hover {
+    background-color: #f8f9fa;
+    color: #2980b9;
+    transform: translateX(5px);
+}
+
+.dashboard-nav a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.dashboard-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #7f8c8d;
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+.session-info {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+        /* === ESTILOS FORMULARIO DE SOLICITUD === */
+
+        .dashboard-main {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+
+        .solicitud-section h2 {
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #c84132;
+            padding-bottom: 0.5rem;
+        }
+
+        .error-message, .success-message {
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .error-message {
+            background-color: #fce4e4;
+            color: #e74c3c;
+            border: 1px solid #e74c3c;
+        }
+
+        .success-message {
+            background-color: #e0f7e9;
+            color: #27ae60;
+            border: 1px solid #27ae60;
+        }
+
+        .solicitud-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        .solicitud-form textarea,
+        .solicitud-form input[type="file"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .solicitud-form textarea:focus,
+        .solicitud-form input[type="file"]:focus {
+            border-color: #c84132;
+            outline: none;
+        }
+
+        .solicitud-form button[type="submit"] {
+            background-color: #c84132;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .solicitud-form button[type="submit"]:hover {
+            background-color: #a83227;
+        }
+
+        /* Responsive para formularios */
+        @media (max-width: 768px) {
+            .dashboard-main {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+/* Estilos para las solicitudes */
+.estado-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.estado-pendiente {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+
+.estado-aprobada {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.estado-rechazada {
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+.comentario-admin {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.acciones-solicitud {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-accion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comentario-container {
+    display: none; /* Inicialmente oculto */
+    margin-bottom: 5px;
+}
+
+.comentario-textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 60px;
+    font-size: 0.9em;
+}
+
+.btn-aprobar, .btn-rechazar {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.btn-aprobar {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-aprobar:hover {
+    background-color: #218838;
+}
+
+.btn-rechazar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-rechazar:hover {
+    background-color: #c82333;
+}
+
+.resuelto {
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+/* Mostrar el textarea de comentario solo cuando se hace hover en el botón rechazar */
+.form-accion:hover .comentario-container {
+    display: block;
+}
